@@ -1,0 +1,15 @@
+{
+  "name": "beneath-the-surface",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "echo 'No linting needed'"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

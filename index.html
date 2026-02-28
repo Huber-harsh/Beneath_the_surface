@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneath the Surface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="screen">
+        <div class="intro-overlay"></div>
+        <div class="intro-content">
+            <h1 class="title-main">Beneath the Surface</h1>
+            <div class="narrative">
+                <p class="quote">"He looks fine. He's smiling. He's talking. But inside, the noise is deafening."</p>
+                <p class="description">
+                    You are navigating the mind of a teenager during a silent panic attack. 
+                    The world sees a calm face, but beneath the surface, a storm of intrusive thoughts is breaking through.
+                </p>
+            </div>
+            
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="key">WASD / ARROWS</span>
+                    <span class="action">to move the focus</span>
+                </div>
+                <div class="info-item">
+                    <span class="key">STABILITY</span>
+                    <span class="action">don't let it break</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="pulse-btn">Enter the Mind</button>
+            
+            <div id="how-to-toggle" class="how-to-toggle">How to survive?</div>
+            <div id="how-to-content" class="hidden">
+                <p>Thoughts will fall. Some are whispers, some are screams. 
+                Dodge them to keep his mind stable. If the stability bar hits zero, the weight becomes too much.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gameplay Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div id="game-bg"></div>
+        <div class="chaos-overlay"></div>
+        
+        <div id="ui-layer">
+            <div class="stability-container">
+                <div class="label">Mental Stability</div>
+                <div id="stability-bar-outer">
+                    <div id="stability-bar-inner"></div>
+                </div>
+            </div>
+            <div id="timer-display">60</div>
+        </div>
+
+        <div id="game-world">
+            <div id="player">
+                <!-- Placeholder for teenage character PNG -->
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&mood[]=sad" alt="Character" referrerPolicy="no-referrer">
+            </div>
+        </div>
+
+        <div class="low-stability-vignette"></div>
+    </div>
+
+    <!-- End Screen -->
+    <div id="end-screen" class="screen hidden">
+        <h2 id="end-title">Game Over</h2>
+        <p id="end-message">Message goes here.</p>
+        <div class="controls">
+            <button id="retry-btn">Retry</button>
+            <button id="back-btn">Back to Intro</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
